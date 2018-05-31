@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.alespero.expandablecardview.ExpandableCardView
+        android:id="@+id/stu_info_person_card"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:title="个人信息"
+        app:icon="@drawable/ic_person"
+        app:inner_view="@layout/inner_stu_info_person_layout"
+        app:expandOnClick="true"/>
+
+    <!-- 以下inner_view没有写，记得替换 -->
+
+    <com.alespero.expandablecardview.ExpandableCardView
+        android:id="@+id/stu_info_class_card"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:title="课表查询"
+        app:icon="@drawable/ic_person"
+        app:inner_view="@layout/inner_stu_info_person_layout"
+        app:expandOnClick="true"/>
+
+    <com.alespero.expandablecardview.ExpandableCardView
+        android:id="@+id/stu_info_score_card"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:title="成绩查询"
+        app:icon="@drawable/ic_person"
+        app:inner_view="@layout/inner_stu_info_person_layout"
+        app:expandOnClick="true"/>
+
+</LinearLayout>
