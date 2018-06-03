@@ -5,6 +5,7 @@
     android:orientation="vertical"
     android:padding="20dp">
 
+    <!-- TODO 需要更详细 -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -19,7 +20,7 @@
             android:textSize="18sp" />
 
         <TextView
-            android:id="@+id/stu_info_inner_number"
+            android:id="@+id/stu_info_inner_person_number"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -36,16 +37,26 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="姓名  ："
+            android:text="姓名      ："
             android:textColor="@color/colorPrimaryText"
             android:textSize="18sp" />
 
         <TextView
-            android:id="@+id/stu_info_inner_name"
+            android:id="@+id/stu_info_inner_person_name"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:textColor="@color/colorSecondaryText" />
 
     </LinearLayout>
+
+    <Button
+        android:id="@+id/stu_info_inner_person_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorBtnBlue"
+        android:text="更多信息"
+        android:textSize="16sp"
+        android:textColor="@color/colorWhite" />
+
 </LinearLayout>

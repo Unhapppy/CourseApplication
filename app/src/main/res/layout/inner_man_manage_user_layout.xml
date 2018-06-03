@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <Button
+        android:id="@+id/man_manage_inner_user_stu_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorBtnBlue"
+        android:text="添加学生账号"
+        android:textSize="16sp"
+        android:textColor="@color/colorWhite"
+        android:layout_marginBottom="20dp"/>
+
+    <Button
+        android:id="@+id/man_manage_inner_user_tea_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorBtnBlue"
+        android:text="添加教师账号"
+        android:textSize="16sp"
+        android:layout_marginBottom="20dp"
+        android:textColor="@color/colorWhite" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/man_manage_inner_stu_modify_btn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@color/colorBtnBlue"
+            android:text="修改学生信息"
+            android:textSize="16sp"
+            android:textColor="@color/colorWhite"
+            android:layout_weight="1"
+            android:layout_marginRight="8dp"/>
+        <Button
+            android:id="@+id/man_manage_inner_tea_modify_btn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@color/colorBtnBlue"
+            android:text="修改教师信息"
+            android:textSize="16sp"
+            android:textColor="@color/colorWhite"
+            android:layout_weight="1"
+            android:layout_marginLeft="8dp"/>
+    </LinearLayout>
+
+</LinearLayout>

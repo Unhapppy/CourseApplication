@@ -8,6 +8,7 @@
     <color name="colorSecondaryText">#757575</color>
     <color name="colorDivider">#BDBDBD</color>
     <color name="colorBackground">#FAFAFA</color>
+    <color name="colorBtnBlue">#1976d2</color>
 
     <color name="colorLightPrimaryBlue">#C5CAE9</color>
     <color name="colorAccentBlue">#536DFE</color>

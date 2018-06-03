@@ -12,6 +12,7 @@ import android.widget.TextView;
 
 import com.haha.administrator.courseapplication.fragment.ManInfoFragment;
 import com.haha.administrator.courseapplication.fragment.ManManageFragment;
+import com.haha.administrator.courseapplication.fragment.SearchStuDialogFragment;
 import com.haha.administrator.courseapplication.fragment.SettingFragment;
 
 public class ManagerActivity extends AppCompatActivity {

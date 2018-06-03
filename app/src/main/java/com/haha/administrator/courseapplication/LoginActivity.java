@@ -42,6 +42,8 @@ import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.haha.administrator.courseapplication.jdbc.DButil;
+
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -89,6 +91,10 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
 
     private int account_type = 1;
 
+    /**
+     * 由于service和jdbc一起用的错误解决不了所以弃用
+     */
+    /*
     //Service初始化
     private MysqlService.MysqlBinder mysqlBinder;
     private ServiceConnection serviceConnection = new ServiceConnection() {
@@ -108,6 +114,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
     //Service传递
     private Intent startServiceIntent;
     private Intent bindServiceIntent;
+    */
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -117,6 +124,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
         mEmailView = (AutoCompleteTextView) findViewById(R.id.email);
         populateAutoComplete();
 
+        /*
         //开启服务
         startServiceIntent = new Intent(LoginActivity.this, MysqlService.class);
         startService(startServiceIntent);
@@ -124,7 +132,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
         //绑定服务
         bindServiceIntent = new Intent(LoginActivity.this, MysqlService.class);
         bindService(bindServiceIntent, serviceConnection, BIND_AUTO_CREATE);
-
+*/
         //
         mPasswordView = (EditText) findViewById(R.id.password);
         mPasswordView.setOnEditorActionListener(new TextView.OnEditorActionListener() {
@@ -454,8 +462,8 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
             String resultStr = "";
             try {
                 // Simulate network access.
-                resultStr = mysqlBinder.PasswordQuery(account_type, mEmail);
-                Log.e("返回值检查", "doInBackground: "+resultStr);
+                resultStr = DButil.PasswordQuery(account_type, mEmail);
+                Log.e("返回值检查", "doInBackground: " + resultStr);
             } catch (SQLException e) {
                 e.printStackTrace();
             }
@@ -494,20 +502,20 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
                 /*
                 待添加动画效果**************************************************************************
                  */
-                if(account_type==1){
+                if (account_type == 1) {
                     Intent intent = new Intent(LoginActivity.this, TeacherActivity.class);
                     startActivity(intent);
                     finish();
-                }else if(account_type==2){
+                } else if (account_type == 2) {
                     Intent intent = new Intent(LoginActivity.this, StudentActivity.class);
                     startActivity(intent);
                     finish();
-                }else if(account_type==3){
+                } else if (account_type == 3) {
                     Intent intent = new Intent(LoginActivity.this, ManagerActivity.class);
                     startActivity(intent);
                     finish();
-                }else{
-                    Toast.makeText(LoginActivity.this,"出现未知数值",Toast.LENGTH_LONG).show();
+                } else {
+                    Toast.makeText(LoginActivity.this, "出现未知数值", Toast.LENGTH_LONG).show();
                 }
 
             } else {
@@ -526,7 +534,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        unbindService(serviceConnection);
+        //unbindService(serviceConnection);
     }
 }
 

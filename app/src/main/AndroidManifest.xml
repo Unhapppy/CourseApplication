@@ -37,15 +37,24 @@
         <activity
             android:name=".StudentActivity"
             android:label="@string/title_activity_student"
-            android:theme="@style/AppStudentTheme"/>
+            android:theme="@style/AppStudentTheme" />
         <activity
             android:name=".TeacherActivity"
             android:label="@string/title_activity_teacher"
-            android:theme="@style/AppTeacherTheme"/>
+            android:theme="@style/AppTeacherTheme" />
         <activity
             android:name=".ManagerActivity"
             android:label="@string/title_activity_manager"
-            android:theme="@style/AppManagerTheme"/>
+            android:theme="@style/AppManagerTheme" />
+        <activity android:name=".StuInfoPersonActivity" />
+        <activity
+            android:name=".ManAddCouActivity"
+            android:theme="@style/AppManagerTheme" />
+        <activity
+            android:name=".ManAddStuActivity"
+            android:theme="@style/AppManagerTheme" />
+        <activity android:name=".ManAddTeaActivity" />
+        <activity android:name=".ManModifyStuActivity"></activity>
     </application>
 
 </manifest>
