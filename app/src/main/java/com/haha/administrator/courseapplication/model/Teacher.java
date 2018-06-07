@@ -9,6 +9,7 @@ public class Teacher {
     private Date birthDate;
     private String passwordStr;
     private String depIdStr;
+    private String depName;
     private String power;
 
     public String getIdStr() {
@@ -65,5 +66,13 @@ public class Teacher {
 
     public void setPower(String power) {
         this.power = power;
+    }
+
+    public String getDepName() {
+        return depName;
+    }
+
+    public void setDepName(String depName) {
+        this.depName = depName;
     }
 }

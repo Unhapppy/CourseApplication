@@ -21,7 +21,7 @@
             android:layout_marginTop="10dp"
             app:expandOnClick="true"
             app:icon="@drawable/ic_person"
-            app:inner_view="@layout/inner_stu_info_person_layout"
+            app:inner_view="@layout/inner_stu_class_select_layout"
             app:title="选课/退选" />
 
         <!-- 以下inner_view没有写，记得替换 -->
@@ -36,7 +36,7 @@
             android:layout_marginTop="10dp"
             app:expandOnClick="true"
             app:icon="@drawable/ic_person"
-            app:inner_view="@layout/inner_stu_info_person_layout"
+            app:inner_view="@layout/inner_stu_class_show_layout"
             app:title="选课情况查询" />
 
     </LinearLayout>

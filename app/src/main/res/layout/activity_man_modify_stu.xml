@@ -13,10 +13,10 @@
         android:layout_height="wrap_content">
 
         <EditText
-            android:id="@+id/man_edit_stu_id"
+            android:id="@+id/man_modify_stu_id"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/sid"
+            android:hint="@string/prompt_email"
             android:maxLines="1"
             android:singleLine="true" />
     </android.support.design.widget.TextInputLayout>
@@ -26,7 +26,7 @@
         android:layout_height="wrap_content">
 
         <EditText
-            android:id="@+id/man_edit_stu_name"
+            android:id="@+id/man_modify_stu_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/name"
@@ -39,7 +39,7 @@
         android:layout_height="wrap_content">
 
         <EditText
-            android:id="@+id/man_edit_stu_gender"
+            android:id="@+id/man_modify_stu_gender"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/gender"
@@ -52,7 +52,7 @@
         android:layout_height="wrap_content">
 
         <EditText
-            android:id="@+id/man_edit_stu_birth"
+            android:id="@+id/man_modify_stu_birth"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/birth"
@@ -65,7 +65,7 @@
         android:layout_height="wrap_content">
 
         <EditText
-            android:id="@+id/man_edit_stu_password"
+            android:id="@+id/man_modify_stu_password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/password"
@@ -79,19 +79,28 @@
         android:layout_marginBottom="24dp">
 
         <EditText
-            android:id="@+id/man_edit_stu_spe_id"
+            android:id="@+id/man_modify_stu_spe_id"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/spe_id"
+            android:hint="@string/spe_dep_id"
             android:maxLines="1"
             android:singleLine="true" />
     </android.support.design.widget.TextInputLayout>
 
     <Button
-        android:id="@+id/man_edit_stu_submit_btn"
+        android:id="@+id/man_modify_stu_submit_btn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
         android:text="提交"
+        android:textColor="@color/colorWhite"
+        android:background="@color/colorBtnBlue"/>
+
+    <Button
+        android:id="@+id/man_modify_stu_delete_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="删除"
         android:textColor="@color/colorWhite"
         android:background="@color/colorBtnBlue"/>
 

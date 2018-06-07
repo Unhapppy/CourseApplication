@@ -16,7 +16,10 @@ import android.widget.EditText;
 
 import com.haha.administrator.courseapplication.R;
 
-
+/**
+ * 弃用
+ */
+@Deprecated
 public class SearchStuDialogFragment extends DialogFragment {
 
     public interface Callback {

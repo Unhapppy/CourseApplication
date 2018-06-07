@@ -9,6 +9,10 @@ public class Student {
     private Date birthDate;
     private String passwordStr;
     private String speIdStr;
+    private String speName;
+
+    //注意，数据库模型中student不含成绩字段，为了方便将成绩加入以在特殊情况下使用
+    private float grade;
 
     public String getIdStr() {
         return idStr;
@@ -56,5 +60,21 @@ public class Student {
 
     public void setSpeIdStr(String speIdStr) {
         this.speIdStr = speIdStr;
+    }
+
+    public String getSpeName() {
+        return speName;
+    }
+
+    public void setSpeName(String speName) {
+        this.speName = speName;
+    }
+
+    public float getGrade() {
+        return grade;
+    }
+
+    public void setGrade(float grade) {
+        this.grade = grade;
     }
 }

@@ -17,7 +17,20 @@
         android:layout_height="wrap_content"
         app:title="录入成绩"
         app:icon="@drawable/ic_person"
-        app:inner_view="@layout/inner_stu_info_person_layout"
+        app:inner_view="@layout/inner_tea_log_layout"
+        app:expandOnClick="true"/>
+
+    <com.alespero.expandablecardview.ExpandableCardView
+        android:id="@+id/tea_log_show_card"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:title="查看成绩"
+        app:icon="@drawable/ic_person"
+        app:inner_view="@layout/inner_tea_log_show_layout"
         app:expandOnClick="true"/>
 
 </LinearLayout>

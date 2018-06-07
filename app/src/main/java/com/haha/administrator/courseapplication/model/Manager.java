@@ -4,7 +4,7 @@ import java.util.Date;
 
 public class Manager {
     private String idStr;
-    private String namaStr;
+    private String nameStr;
     private String genderStr;
     private Date birthDate;
     private String passwordStr;
@@ -18,12 +18,12 @@ public class Manager {
         this.idStr = idStr;
     }
 
-    public String getNamaStr() {
-        return namaStr;
+    public String getNameStr() {
+        return nameStr;
     }
 
-    public void setNamaStr(String namaStr) {
-        this.namaStr = namaStr;
+    public void setNameStr(String namaStr) {
+        this.nameStr = namaStr;
     }
 
     public String getGenderStr() {

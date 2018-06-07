@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <Button
+        android:id="@+id/man_info_inner_course_spe_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorBtnBlue"
+        android:text="查询专业课程"
+        android:textSize="16sp"
+        android:textColor="@color/colorWhite"
+        android:layout_marginBottom="20dp"/>
+
+    <Button
+        android:id="@+id/man_info_inner_course_all_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorBtnBlue"
+        android:text="显示全部课程"
+        android:textSize="16sp"
+        android:textColor="@color/colorWhite"
+        android:layout_marginBottom="20dp"/>
+
+</LinearLayout>

@@ -46,15 +46,40 @@
             android:name=".ManagerActivity"
             android:label="@string/title_activity_manager"
             android:theme="@style/AppManagerTheme" />
-        <activity android:name=".StuInfoPersonActivity" />
+        <activity android:name=".StuInfoPersonActivity"
+            android:theme="@style/AppStudentTheme"/>
         <activity
             android:name=".ManAddCouActivity"
+            android:label="添加课程"
             android:theme="@style/AppManagerTheme" />
         <activity
             android:name=".ManAddStuActivity"
+            android:label="添加学生账号"
             android:theme="@style/AppManagerTheme" />
-        <activity android:name=".ManAddTeaActivity" />
-        <activity android:name=".ManModifyStuActivity"></activity>
+        <activity android:name=".ManAddTeaActivity"
+            android:label="添加教师帐号"
+            android:theme="@style/AppManagerTheme"/>
+        <activity android:name=".ManModifyStuActivity"
+            android:label="修改学生账号"
+            android:theme="@style/AppManagerTheme"/>
+        <activity android:name=".ManModifyTeaActivity"
+            android:label="修改教师账号"
+            android:theme="@style/AppManagerTheme"/>
+        <activity android:name=".ShowCourseActivity"
+            android:label="课程列表"
+            android:theme="@style/AppManagerTheme"/>
+        <activity android:name=".ManModifyCourseActivity"
+            android:label="修改课程"
+            android:theme="@style/AppManagerTheme"/>
+        <activity android:name=".StuSelectCouActivity"
+            android:label="选课"
+            android:theme="@style/AppStudentTheme"/>
+        <activity android:name=".TeaStuInfoActivity"
+            android:label="查看学生信息"
+            android:theme="@style/AppTeacherTheme"/>
+        <activity android:name=".TeaShowGradeActivity"
+            android:label="查看成绩"
+            ></activity>
     </application>
 
 </manifest>

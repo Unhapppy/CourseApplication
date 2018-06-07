@@ -8,7 +8,7 @@
     <android.support.design.widget.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="按学/工号查询">
+        android:hint="按编号查询">
 
         <EditText
             android:id="@+id/dialog_search_id"
@@ -21,7 +21,7 @@
     <android.support.design.widget.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="或按姓名查询">
+        android:hint="或按名称查询">
 
         <EditText
             android:id="@+id/dialog_search_name"

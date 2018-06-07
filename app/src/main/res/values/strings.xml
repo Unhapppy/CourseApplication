@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Course Application</string>
+    <string name="app_name">选课系统</string>
 
     <!-- Strings related to login -->
     <string name="prompt_email">学/工号</string>
@@ -34,19 +34,20 @@
     <string name="grade">所在年级</string>
     <string name="tid">工号</string>
     <string name="power">权限:</string>
-    <string name="title_activity_teacher">TeacherActivity</string>
+    <string name="title_activity_teacher">教师</string>
     <string name="title_section1">Section 1</string>
     <string name="title_section2">Section 2</string>
     <string name="title_section3">Section 3</string>
     <string name="password">默认密码</string>
     <string name="spe_id">专业号</string>
+    <string name="spe_dep_id">院系号</string>
 
     <string name="action_example">Example action</string>
-    <string name="title_activity_student">StudentActivity</string>
+    <string name="title_activity_student">学生</string>
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
-    <string name="title_activity_manager">ManagerActivity</string>
+    <string name="title_activity_manager">管理员</string>
 
     <string name="bottom_nav_info">信息查询</string>
     <string name="bottom_nav_tea">录入成绩</string>

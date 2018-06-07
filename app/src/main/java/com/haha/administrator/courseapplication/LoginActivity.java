@@ -42,6 +42,7 @@ import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.haha.administrator.courseapplication.animation.CircularAnim;
 import com.haha.administrator.courseapplication.jdbc.DButil;
 
 import java.sql.ResultSet;
@@ -88,6 +89,9 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
     private RadioButton teacherRadioBtn;
     private RadioButton studentRadioBtn;
     private RadioButton managerRadioBtn;
+    private String email = "";
+    private String password = "";
+    private Button mEmailSignInButton;
 
     private int account_type = 1;
 
@@ -115,7 +119,6 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
     private Intent startServiceIntent;
     private Intent bindServiceIntent;
     */
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -146,7 +149,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
             }
         });
 
-        Button mEmailSignInButton = (Button) findViewById(R.id.email_sign_in_button);
+        mEmailSignInButton = (Button) findViewById(R.id.email_sign_in_button);
         mEmailSignInButton.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -301,8 +304,8 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
         mPasswordView.setError(null);
 
         // Store values at the time of the login attempt.
-        String email = mEmailView.getText().toString();
-        String password = mPasswordView.getText().toString();
+        email = mEmailView.getText().toString();
+        password = mPasswordView.getText().toString();
 
         boolean cancel = false;
         View focusView = null;
@@ -359,9 +362,10 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
         // On Honeycomb MR2 we have the ViewPropertyAnimator APIs, which allow
         // for very easy animations. If available, use these APIs to fade-in
         // the progress spinner.
+        CircularAnim.hide(mEmailSignInButton).go();
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB_MR2) {
             int shortAnimTime = getResources().getInteger(android.R.integer.config_shortAnimTime);
-
+            /*
             mLoginFormView.setVisibility(show ? View.GONE : View.VISIBLE);
             mLoginFormView.animate().setDuration(shortAnimTime).alpha(
                     show ? 0 : 1).setListener(new AnimatorListenerAdapter() {
@@ -369,7 +373,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
                 public void onAnimationEnd(Animator animation) {
                     mLoginFormView.setVisibility(show ? View.GONE : View.VISIBLE);
                 }
-            });
+            });*/
 
             mProgressView.setVisibility(show ? View.VISIBLE : View.GONE);
             mProgressView.animate().setDuration(shortAnimTime).alpha(
@@ -503,17 +507,47 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
                 待添加动画效果**************************************************************************
                  */
                 if (account_type == 1) {
-                    Intent intent = new Intent(LoginActivity.this, TeacherActivity.class);
-                    startActivity(intent);
-                    finish();
+                    final Intent intent = new Intent(LoginActivity.this, TeacherActivity.class);
+                    intent.putExtra("id", email);
+                    intent.putExtra("password", password);
+                    intent.putExtra("type", account_type);
+                    CircularAnim.fullActivity(LoginActivity.this, mProgressView)
+                            .colorOrImageRes(R.color.colorPrimaryGreen)
+                            .go(new CircularAnim.OnAnimationEndListener() {
+                                @Override
+                                public void onAnimationEnd() {
+                                    startActivity(intent);
+                                    finish();
+                                }
+                            });
                 } else if (account_type == 2) {
-                    Intent intent = new Intent(LoginActivity.this, StudentActivity.class);
-                    startActivity(intent);
-                    finish();
+                    final Intent intent = new Intent(LoginActivity.this, StudentActivity.class);
+                    intent.putExtra("id", email);
+                    intent.putExtra("type", account_type);
+                    intent.putExtra("password", password);
+                    CircularAnim.fullActivity(LoginActivity.this, mProgressView)
+                            .colorOrImageRes(R.color.colorPrimary)
+                            .go(new CircularAnim.OnAnimationEndListener() {
+                                @Override
+                                public void onAnimationEnd() {
+                                    startActivity(intent);
+                                    finish();
+                                }
+                            });
                 } else if (account_type == 3) {
-                    Intent intent = new Intent(LoginActivity.this, ManagerActivity.class);
-                    startActivity(intent);
-                    finish();
+                    final Intent intent = new Intent(LoginActivity.this, ManagerActivity.class);
+                    intent.putExtra("id", email);
+                    intent.putExtra("type", account_type);
+                    intent.putExtra("password", password);
+                    CircularAnim.fullActivity(LoginActivity.this, mProgressView)
+                            .colorOrImageRes(R.color.colorPrimaryPurple)
+                            .go(new CircularAnim.OnAnimationEndListener() {
+                                @Override
+                                public void onAnimationEnd() {
+                                    startActivity(intent);
+                                    finish();
+                                }
+                            });
                 } else {
                     Toast.makeText(LoginActivity.this, "出现未知数值", Toast.LENGTH_LONG).show();
                 }

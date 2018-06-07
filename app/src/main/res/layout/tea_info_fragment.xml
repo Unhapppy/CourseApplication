@@ -22,7 +22,7 @@
             android:layout_marginTop="10dp"
             app:expandOnClick="true"
             app:icon="@drawable/ic_person"
-            app:inner_view="@layout/inner_stu_info_person_layout"
+            app:inner_view="@layout/inner_info_person_layout"
             app:title="个人信息" />
 
         <com.alespero.expandablecardview.ExpandableCardView
@@ -35,7 +35,7 @@
             android:layout_marginTop="10dp"
             app:expandOnClick="true"
             app:icon="@drawable/ic_person"
-            app:inner_view="@layout/inner_stu_info_person_layout"
+            app:inner_view="@layout/tea_cou_listview"
             app:title="课表查询" />
 
         <com.alespero.expandablecardview.ExpandableCardView
@@ -48,7 +48,7 @@
             android:layout_marginTop="10dp"
             app:expandOnClick="true"
             app:icon="@drawable/ic_person"
-            app:inner_view="@layout/inner_stu_info_person_layout"
+            app:inner_view="@layout/tea_cou_simple_listview"
             app:title="选课名单查询" />
 
     </LinearLayout>
